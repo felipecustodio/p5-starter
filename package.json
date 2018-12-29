@@ -1,0 +1,20 @@
+{
+  "name": "template_p5",
+  "version": "1.0.0",
+  "description": "p5.js sketch",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Custódio",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-p5js": "^1.0.1",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "htmlhint": "^0.10.1",
+    "stylelint": "^9.9.0"
+  }
+}
