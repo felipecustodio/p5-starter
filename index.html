@@ -3,21 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Template</title>
+    <!-- Instructs the mobile browser to scale the web page to take 
+    as up much of the screen as possible -->
+    <!-- Thanks to: https://creative-coding.decontextualize.com/mobile/ -->
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+
+    <title>p5.js boilerplate</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- p5.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" integrity="sha256-Hu8qm4q26AVXOWGlyZqO04hF+8WlulgTj51vr0FgNG8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" integrity="sha256-D/ObQKlMXTTSWaefJnNgyHjbE4HSZWoJ1zh72TzHPUA=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js" integrity="sha256-J4zMW4h1Q+phN9U/KCNKRDlMGCuL8uqSsLVeclTF46k=" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+
     <!-- CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css" integrity="sha512-cG7Z4degp9718dDjGjeJmar0+g7RtE/olDe0VRKEFDtOEkm91JSvE7ZxN2+sijkU0AAK3e2xzu7bafBGC/uiqA==" crossorigin="anonymous" />
+    <!-- https://edwardtufte.github.io/tufte-css/ -->
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
-    <script src="sketch.js"></script>
+    <article>
+      <section>
+        <h1><code><a href="https://p5js.org/">p5.js</a></code> Boilerplate</h1>
+
+        <figure id="sketchContainer">
+          <span id="fps" class="marginnote">FPS counter</span>
+          <script src="sketch.js"></script>
+        </figure>
+
+      </section>
+    </article>
   </body>
+
 </html>

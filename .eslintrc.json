@@ -7,5 +7,15 @@
 	],
 	"plugins": [
 		"html"
-	]
+	],
+	"rules": {
+		"linebreak-style": 0,
+		"spaced-comment": 0,
+		"no-unused-vars": 0,
+		"quotes": 0,
+		"prefer-template": 0
+	},
+	"env": {
+		"browser": true		
+	}
 }
