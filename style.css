@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 
+a, h1 {
+	transition: color 0.3s ease-in-out;
+}
+
 a:hover, h1:hover {
-  color: #c7b198;
-  transition: 0.3s;
+	color: #c7b198;
 }
 
 body {
