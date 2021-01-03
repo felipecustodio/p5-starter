@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/1200/0*keE5EUA6n8Ay-RzO.png" width="200" height="200"/>
   <h1 align="center">p5-starter</h1>
-  <p align="center">Boilerplate for p5.js projects, including VS Code workspace settings with Intellisense and linting for HTML, CSS and JS.</p>
+  <p align="center">🌿 Boilerplate for p5.js projects, including VS Code workspace settings with Intellisense and linting for HTML, CSS and JS.</p>
 </p>
 
 # Installation and Usage
@@ -36,4 +36,4 @@ The styling is loosely based on Edward Tufte's typography and color choices. You
 
 There are some disabled rules on `.eslintrc.json`, but they're
 entirely personal choices. I'm mostly using the linter for checking
-errors, breaking some style rules. �
+errors, breaking some style rules. 😅
