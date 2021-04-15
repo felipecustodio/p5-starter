@@ -1,6 +1,5 @@
 <p align="center">
   <img src="assets/readme_banner.png"/>
-  <p align="center">🌿 Boilerplate for p5.js projects, including VS Code workspace settings with Intellisense and linting for HTML, CSS and JS.</p>
 </p>
 
 # Installation and Usage
