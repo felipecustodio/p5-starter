@@ -23,7 +23,18 @@ function setup() {
   updateContainer();
   canvas = createCanvas(w, h, WEBGL);
   smooth();
-  canvas.parent("#sketchContainer");
+  
+  // Firefox with privacy settings may not return a proper canvas object
+  // Check if canvas and parent method exist before calling
+  if (canvas && typeof canvas.parent === 'function') {
+    canvas.parent("#sketchContainer");
+  } else if (canvas) {
+    // Fallback: manually append canvas to container if parent method doesn't exist
+    const container = document.getElementById('sketchContainer');
+    if (container) {
+      container.appendChild(canvas);
+    }
+  }
 }
 
 function draw() {
