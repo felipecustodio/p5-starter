@@ -6,6 +6,8 @@
 
 This repository is a template, which you can use to quickstart your own new projects. It comes with a pre-configured environment for VS Code, with suggested extensions and configurations.
 
+**Updated to use p5.js 2.0.4** - This starter kit now uses the latest p5.js 2.0 for enhanced performance and new features.
+
 [GitHub - Creating a repository from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 
 ```bash

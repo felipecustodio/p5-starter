@@ -74,5 +74,5 @@ function colorAlpha(aColor, alpha) {
   if (alpha <= 0.1) {
     a = 0.1;
   }
-  return color('rgba(${[red(c), green(c), blue(c), a].join(', ')})');
+  return color(`rgba(${[red(c), green(c), blue(c), a].join(', ')})`);
 }
