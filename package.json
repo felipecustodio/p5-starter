@@ -15,7 +15,7 @@
     "eslint-config-p5js": "^1.0.1",
     "eslint-plugin-html": "^5.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "htmlhint": "^0.10.1",
+    "htmlhint": "^1.6.3",
     "stylelint": "^13.8.0"
   }
 }
