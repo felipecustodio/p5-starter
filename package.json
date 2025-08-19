@@ -16,6 +16,6 @@
     "eslint-plugin-html": "^5.0.0",
     "eslint-plugin-import": "^2.14.0",
     "htmlhint": "^1.6.3",
-    "stylelint": "^13.8.0"
+    "stylelint": "^16.23.1"
   }
 }
