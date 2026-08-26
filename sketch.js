@@ -21,9 +21,9 @@ function windowResized() {
 
 function setup() {
   updateContainer();
-  canvas = createCanvas(w, h, WEBGL);
+  const cnv = createCanvas(w, h, WEBGL);
   smooth();
-  canvas.parent("#sketchContainer");
+  cnv.parent("#sketchContainer");
 }
 
 function draw() {
