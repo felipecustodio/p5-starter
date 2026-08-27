@@ -1,3 +1,5 @@
+
+
 <p align="center">
   <img src="assets/readme_banner.png"/>
 </p>
@@ -29,7 +31,7 @@ Included is a `.vscode/extensions.json` file, which recommends a workspace insid
 * [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 * [htmlhint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint)
 
-To view your sketch, start the Live Server on VS Code. It defaults to [http://127.0.0.1:5500/](http://127.0.0.1:5500/ "http://127.0.0.1:5500/"). It supportes **live reload**, so you can edit the sketch and see the changes in near realtime, like the p5 online editor.
+To view your sketch, start the Live Server on VS Code. It defaults to [http://127.0.0.1:5500/](http://127.0.0.1:5500/ "http://127.0.0.1:5500/"). It supports **live reload**, so you can edit the sketch and see the changes in near realtime, like the p5 online editor.
 
 ## Intellisense
 
