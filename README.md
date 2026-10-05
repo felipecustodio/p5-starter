@@ -25,3 +25,5 @@ mise run preview  # preview the build
 Edit `src/main.ts` for the sketch, `index.html` for the page, and `style.css` for the layout. p5.js includes its own TypeScript declarations.
 
 The example uses pixel density 1 to favor frame rate on high-density screens. Browser animation remains limited by the display refresh rate. The page loads General Sans from Fontshare and Martian Mono from Google Fonts.
+
+GitHub Pages publishes the `dist/` build from `main` through `.github/workflows/pages.yml`.

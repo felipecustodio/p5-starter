@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "check": "tsc --noEmit",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview"
   },
   "author": "Felipe Custódio",
