@@ -26,6 +26,7 @@ new p5((p: p5) => {
     p.createCanvas(width, height, p.WEBGL);
     p.setAttributes('antialias', false);
     p.pixelDensity(1);
+    p.frameRate(Infinity);
 
     const syncMotion = () => {
       if (reducedMotion.matches) {
