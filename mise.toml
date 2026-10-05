@@ -1,0 +1,23 @@
+[tools]
+node = "24"
+"github:aubepkg/aube" = "2.6.1"
+
+[tasks.install]
+description = "Install project dependencies"
+run = "aube install"
+
+[tasks.dev]
+description = "Start the development server"
+run = "aube run dev"
+
+[tasks.check]
+description = "Type-check the frontend"
+run = "aube run check"
+
+[tasks.build]
+description = "Build the static site"
+run = "aube run build"
+
+[tasks.preview]
+description = "Preview the production build"
+run = "aube run preview"
