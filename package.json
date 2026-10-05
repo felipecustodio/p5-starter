@@ -1,22 +1,23 @@
 {
-  "name": "template_p5",
+  "name": "p5-starter",
   "version": "1.0.0",
-  "description": "p5.js sketch",
+  "private": true,
+  "type": "module",
+  "description": "p5.js sketch starter",
   "packageManager": "aube@2.6.1",
-  "main": "sketch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "check": "tsc --noEmit",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Felipe Custódio",
   "license": "ISC",
+  "dependencies": {
+    "p5": "2.3.4"
+  },
   "devDependencies": {
-    "@types/p5": "1.7.6",
-    "eslint": "^9.33.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-p5js": "^1.0.1",
-    "eslint-plugin-html": "^5.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "htmlhint": "^1.6.3",
-    "stylelint": "^13.8.0"
+    "typescript": "6.0.2",
+    "vite": "8.3.2"
   }
 }
