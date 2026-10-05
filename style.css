@@ -10,6 +10,10 @@ figure {
   margin: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 body {
   min-width: 280px;
   min-height: 100vh;
@@ -86,7 +90,7 @@ body {
   letter-spacing: 0.04em;
 }
 
-.readout output {
+#fps {
   min-width: 5ch;
   color: #ff743d;
   text-align: right;
