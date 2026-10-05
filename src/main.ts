@@ -23,9 +23,9 @@ new p5((p: p5) => {
 
   p.setup = () => {
     const { width, height } = size();
-    p.pixelDensity(1);
-    p.setAttributes('antialias', false);
     p.createCanvas(width, height, p.WEBGL);
+    p.setAttributes('antialias', false);
+    p.pixelDensity(1);
 
     const syncMotion = () => {
       if (reducedMotion.matches) {
@@ -44,12 +44,14 @@ new p5((p: p5) => {
   p.draw = () => {
     p.background('#eeeeea');
 
-    p.push();
-    p.translate(p.mouseX - p.width / 2, p.mouseY - p.height / 2);
-    p.noStroke();
-    p.fill('#ff743d');
-    p.circle(0, 0, 50);
-    p.pop();
+    if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) {
+      p.push();
+      p.translate(p.mouseX - p.width / 2, p.mouseY - p.height / 2);
+      p.noStroke();
+      p.fill('#ff743d');
+      p.circle(0, 0, 50);
+      p.pop();
+    }
 
     p.push();
     p.stroke('#151515');
