@@ -1,44 +1,27 @@
-<p align="center">
-  <img src="assets/readme_banner.png"/>
-</p>
+# p5.js starter
 
-# Installation and Usage
+A minimal p5.js 2.3.4 template with strict TypeScript and Vite.
 
-This repository is a template, which you can use to quickstart your own new projects. It comes with a pre-configured environment for VS Code, with suggested extensions and configurations.
+## Setup
 
-**Updated to use p5.js 2.0.4** - This starter kit now uses the latest p5.js 2.0 for enhanced performance and new features.
+Install [mise](https://mise.jdx.dev/) and run:
 
-[GitHub - Creating a repository from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-
-```bash
-.
-├── index.html
-├── jsconfig.json
-├── node_modules
-├── package.json
-├── sketch.js
-└── style.css
+```sh
+mise install
+mise run install
+mise run dev
 ```
 
-# Visual Studio Code Workflow
+The site opens at `http://localhost:5173/`. Aube manages dependencies and mise supplies Aube and Node 24.
 
-Included is a `.vscode/extensions.json` file, which recommends a workspace inside Visual Studio Code with the following extensions:
+## Tasks
 
-* [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-* [p5.js snippets](https://marketplace.visualstudio.com/items?itemName=acidic9.p5js-snippets)
-* [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-* [htmlhint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint)
+```sh
+mise run check    # TypeScript
+mise run build    # production files in dist/
+mise run preview  # preview the build
+```
 
-To view your sketch, start the Live Server on VS Code. It defaults to [http://127.0.0.1:5500/](http://127.0.0.1:5500/ "http://127.0.0.1:5500/"). It supportes **live reload**, so you can edit the sketch and see the changes in near realtime, like the p5 online editor.
+Edit `src/main.ts` for the sketch, `index.html` for the page, and `style.css` for the layout. p5.js includes its own TypeScript declarations.
 
-## Intellisense
-
-Intellisense is provided via p5.js TypeScript definition files.
-
-Solution found on issue [#1339](https://github.com/processing/p5.js/issues/1339 "#1339").
-
-Instead of downloading the TypeScript definitions, we can now use this NPM package: [@types/p5](https://www.npmjs.com/package/@types/p5).
-
-# ESLint rules
-
-There are some disabled rules on `.eslintrc.json`, but they're entirely personal choices.
+The example uses pixel density 1 to favor frame rate on high-density screens. Browser animation remains limited by the display refresh rate. The page loads General Sans from Fontshare and Martian Mono from Google Fonts.
