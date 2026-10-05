@@ -1,33 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
-
-a, h1 {
-	transition: color 0.3s ease-in-out;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-a:hover, h1:hover {
-	color: #c7b198;
+html,
+body,
+figure {
+  margin: 0;
 }
 
 body {
-	font-family: 'Goudy Bookletter 1911', serif;
-	display: flex;
-	flex-flow: row;
-	justify-content: center;
-	padding-top: 10px;
+  min-width: 280px;
+  min-height: 100vh;
+  background: #fff;
+  color: #151515;
+  font-family: 'General Sans', Arial, sans-serif;
+}
+
+.page {
+  width: min(100% - 32px, 1440px);
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  min-height: 96px;
+  border-bottom: 1px solid #151515;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background: #151515;
+  color: #fff;
+  font-family: 'Martian Mono', monospace;
+  font-size: 16px;
+  letter-spacing: -0.12em;
+}
+
+.brand {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.descriptor {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  border-left: 1px solid #151515;
+  font-size: 16px;
+}
+
+.stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding-block: clamp(24px, 4vw, 56px);
+}
+
+.readout {
+  align-self: flex-end;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: 'Martian Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.readout output {
+  min-width: 5ch;
+  color: #ff743d;
+  text-align: right;
 }
 
 #sketchContainer {
-	display: flex;
-	flex-flow: column;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #151515;
+  background: #eeeeea;
+}
 
-	width: 80vw;
-	height: 60vh;
+#sketchContainer canvas {
+  display: block;
+}
 
-	overflow: visible;
-}​
+@media (min-width: 900px) {
+  .page {
+    width: min(100% - 84px, 1440px);
+  }
+}
 
-canvas {
-	z-index: -3;
-    width: 100%;
-	height: 100%;
+@media (max-width: 600px) {
+  .site-header {
+    min-height: 80px;
+  }
+
+  .mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .wordmark {
+    gap: 12px;
+  }
+
+  .descriptor {
+    padding-left: 12px;
+    font-size: 14px;
+  }
+
+  #sketchContainer {
+    aspect-ratio: 4 / 3;
+  }
 }

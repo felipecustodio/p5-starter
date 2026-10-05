@@ -42,17 +42,17 @@ new p5((p: p5) => {
   };
 
   p.draw = () => {
-    p.background('#fffff8');
+    p.background('#eeeeea');
 
     p.push();
     p.translate(p.mouseX - p.width / 2, p.mouseY - p.height / 2);
     p.noStroke();
-    p.fill('#c7b198');
+    p.fill('#ff743d');
     p.circle(0, 0, 50);
     p.pop();
 
     p.push();
-    p.stroke('#c7b198');
+    p.stroke('#151515');
     p.strokeWeight(2);
     p.noFill();
     p.rotateY(angle);
@@ -60,7 +60,7 @@ new p5((p: p5) => {
     p.box(100, 100);
 
     p.noStroke();
-    p.fill('#321f28');
+    p.fill('#151515');
     p.sphere(25, 12, 8);
     p.pop();
 
