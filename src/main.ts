@@ -81,6 +81,7 @@ const reset = required<HTMLButtonElement>('#reset');
 
 let settings: Settings = { ...defaults };
 let sketch: p5 | undefined;
+let ready = false;
 let angle = 0;
 let frameCount = 0;
 let fpsStart = 0;
@@ -150,7 +151,7 @@ function applyProjection(p: p5): void {
 }
 
 function applyMotion(): void {
-  if (!sketch) return;
+  if (!sketch || !ready) return;
   if (reducedMotion.matches) {
     sketch.noLoop();
     sketch.redraw();
@@ -163,22 +164,25 @@ function applyMotion(): void {
 }
 
 function mountSketch(): void {
+  ready = false;
   sketch?.remove();
   container.replaceChildren();
   fps.textContent = '—';
   frameCount = 0;
   fpsStart = performance.now();
   sketch = new p5((p: p5) => {
-    p.setup = () => {
-      p.createCanvas(container.clientWidth, container.clientHeight, p.WEBGL);
+    p.setup = async () => {
+      await p.createCanvas(container.clientWidth, container.clientHeight, p.WEBGL);
       p.setAttributes({
         version: settings.webglVersion, antialias: settings.antialias, alpha: settings.transparent,
         depth: settings.depth, stencil: settings.stencil, premultipliedAlpha: settings.premultipliedAlpha,
         preserveDrawingBuffer: settings.preserveDrawingBuffer, perPixelLighting: settings.perPixelLighting,
       });
+      await (p as p5 & { _renderer: { contextReady: Promise<void> } })._renderer.contextReady;
       p.pixelDensity(settings.pixelDensity || window.devicePixelRatio);
       p.frameRate(settings.fpsLimit || Infinity);
       applyProjection(p);
+      ready = true;
       if (reducedMotion.matches) {
         p.noLoop();
         p.redraw();
@@ -255,7 +259,7 @@ function updateSetting(key: SettingKey): void {
     mountSketch();
     return;
   }
-  if (!sketch) return;
+  if (!sketch || !ready) return;
   if (key === 'pixelDensity') sketch.pixelDensity(settings.pixelDensity || window.devicePixelRatio);
   if (key === 'fpsLimit') sketch.frameRate(settings.fpsLimit || Infinity);
   if (key === 'projection') applyProjection(sketch);
@@ -292,7 +296,7 @@ reset.addEventListener('click', () => {
 });
 reducedMotion.addEventListener('change', applyMotion);
 new ResizeObserver(() => {
-  if (!sketch || container.clientWidth === 0 || container.clientHeight === 0) return;
+  if (!sketch || !ready || container.clientWidth === 0 || container.clientHeight === 0) return;
   if (sketch.width === container.clientWidth && sketch.height === container.clientHeight) return;
   sketch.resizeCanvas(container.clientWidth, container.clientHeight);
   applyProjection(sketch);
