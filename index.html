@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,10 +17,23 @@
           <h1 class="brand" aria-label="p5.js starter">p5.js</h1>
           <span class="descriptor">starter</span>
         </div>
+        <span class="header-note">WEBGL / LIVE</span>
       </header>
-      <main class="stage">
-        <div class="readout"><span>FPS</span><span id="fps">—</span></div>
-        <figure id="sketchContainer" aria-label="Animated sketch with a rotating cube and sphere, and a circle that follows the pointer."></figure>
+      <main class="workspace">
+        <section class="stage" aria-label="Prévia da sketch">
+          <div class="stage-bar">
+            <span>01 / CANVAS</span>
+            <div class="readout"><span>FPS</span><output id="fps">—</output></div>
+          </div>
+          <figure id="sketchContainer" aria-label="Sketch 3D com cubo giratório, esfera central e cursor interativo."></figure>
+        </section>
+        <aside class="inspector" aria-labelledby="inspector-title">
+          <div class="inspector-header">
+            <div><span class="eyebrow">02 / CONTROLES</span><h2 id="inspector-title">Renderização</h2></div>
+            <button id="reset" type="button" class="reset-button">RESET</button>
+          </div>
+          <div id="controls"></div>
+        </aside>
       </main>
     </div>
   </body>
