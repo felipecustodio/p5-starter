@@ -1,6 +1,6 @@
 # p5.js starter
 
-A minimal p5.js 2.3.4 template with strict TypeScript and Vite.
+A p5.js 2.4.0 template with strict TypeScript, Vite, and a live WebGL inspector.
 
 ## Setup
 
@@ -22,8 +22,10 @@ mise run build    # production files in dist/
 mise run preview  # preview the build
 ```
 
-Edit `src/main.ts` for the sketch, `index.html` for the page, and `style.css` for the layout. p5.js includes its own TypeScript declarations.
+Edit `src/main.ts` for the sketch and its controls, `index.html` for the page, and `style.css` for the layout. p5.js includes its own TypeScript declarations.
 
-The example uses pixel density 1 to favor frame rate on high-density screens. Browser animation remains limited by the display refresh rate. The page loads General Sans from Fontshare and Martian Mono from Google Fonts.
+Antialiasing is enabled by default. The inspector changes the scene immediately; WebGL context options recreate the sketch automatically. Pixel density starts at 1 for speed, with 2× and display density available for sharper output. The FPS cap starts at unlimited; actual FPS depends on the browser, display, and graphics hardware. Reduced-motion preference pauses the animation while keeping the controls usable.
+
+The page loads General Sans from Fontshare and Martian Mono from Google Fonts.
 
 GitHub Pages publishes the `dist/` build from `main` through `.github/workflows/pages.yml`.
