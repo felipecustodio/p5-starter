@@ -14,7 +14,7 @@
   "author": "Felipe Custódio",
   "license": "ISC",
   "dependencies": {
-    "p5": "2.3.4"
+    "p5": "2.4.0"
   },
   "devDependencies": {
     "typescript": "6.0.2",
